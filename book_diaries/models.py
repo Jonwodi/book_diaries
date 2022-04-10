@@ -19,7 +19,7 @@ class BookNote(models.Model):
         Book, on_delete=models.CASCADE
     )  # If a Book is deleted then delete notes associated with that book
     note_chapter_title = models.CharField(max_length=255)
-    note_chapter_text = models.TextField
+    note_chapter_text = models.TextField()
 
     def __str__(self):
-        return self.note_chapter_title
+        return self.note_chapter_title, self.note_chapter_text

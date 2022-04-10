@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Book, BookNote
+
+
+@admin.register(Book)
+class Book(admin.ModelAdmin):
+    pass
+
+
+@admin.register(BookNote)
+class BookNote(admin.ModelAdmin):
+    pass
