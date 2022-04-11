@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% comment %} extends "base.hmtl" means this html file inherits from base.html {% endcomment %}
+
+{% block content %}
+  <h1>HOME PAGE</h1>
+  {% for book in books %}
+    <p>
+      {{ book.book_title }}
+    </p>
+  {% empty %} {% comment %} empty means if the users database records are empty then return paragraph below {% endcomment %}
+    <p>There is no record of books or book notes to show</p>
+  {% endfor %}
+{% endblock content %}
+
